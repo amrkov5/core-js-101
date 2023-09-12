@@ -161,12 +161,10 @@ function getStringsLength(arr) {
  *    [ 1, 'b', 'c'], 'x', 0  => [ 'x', 1, 'b', 'c' ]
  */
 function insertItem(arr, item, index) {
-  const firstPart = arr.slice(0, index);
-  firstPart.push(item);
-  return firstPart.concat(arr.slice(index));
+  return arr.splice(index, 0, item);
   // throw new Error('Not implemented');
 }
-// console.log(insertItem([ 1, 'b', 'c'], 'x', 0))
+// console.log(insertItem([ 1, 3, 4, 5 ], 2, 1))
 
 /**
  * Returns the n first items of the specified array
